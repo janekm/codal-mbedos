@@ -23,7 +23,7 @@
 #include "GattClient.h"
 #include "SecurityManager.h"
 
-#include "ble/FunctionPointerWithContext.h"
+#include "FunctionPointerWithContext.h"
 
 #ifdef YOTTA_CFG_MBED_OS
 #include "mbed-drivers/mbed_error.h"

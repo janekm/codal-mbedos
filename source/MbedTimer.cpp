@@ -61,13 +61,16 @@ namespace codal
             timeout.detach();
             timeout.attach_us(callback(this, &Timer::triggered), t);
         }
+
         /**
          * request to the physical timer implementation code to trigger immediately.
          */
         void Timer::syncRequest()
         {
+            
             disableInterrupts();
             int elapsed = timer.read_us();
+            //DMESG("elapsed: %d", elapsed);
             timer.reset();
             this->sync(elapsed);
             enableInterrupts();

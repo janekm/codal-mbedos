@@ -64,6 +64,7 @@ namespace codal
         int I2C::write(uint32_t address, uint8_t* data, uint32_t len, bool repeated)
         {
             return mbed::I2C::write(address, (const char *)data, len, repeated);
+
         }
 
         /**
@@ -84,6 +85,7 @@ namespace codal
             command[1] = value;
 
             return mbed::I2C::write(address, (const char *)command, 2);
+
         }
 
         /**
